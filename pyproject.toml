@@ -18,13 +18,19 @@ classifiers = [
 dependencies = [
     "termcolor"
 ]
-
 requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "pytest>=6.0",
+    "pytest-cov",
+    "jupyter",
+    "pytest",
+    "twine"
+]
 
 [project.urls]
 Homepage = "https://github.com/JPL-Evapotranspiration-Algorithms/colored-logging"
 Repository = "https://github.com/JPL-Evapotranspiration-Algorithms/colored-logging"
 Issues = "https://github.com/JPL-Evapotranspiration-Algorithms/colored-logging/issues"
-
-[tool.setuptools.package-data]
-colored_logging = ["*.txt"]

@@ -29,5 +29,5 @@ conda install -c conda-forge colored-logging
 Import this package as `colored_logging` with an under-score.
 
 ```python
-import colored_logging
+import colored_logging as cl
 ```
