@@ -23,6 +23,12 @@ dist:
 	make build
 	make twine-upload
 
+conda-forge-submit:
+	@bash scripts/submit_to_conda_forge.sh
+
+conda-forge-submit-version:
+	@bash scripts/submit_to_conda_forge.sh $(VERSION)
+
 remove-environment:
 	mamba env remove -y -n rasters
 

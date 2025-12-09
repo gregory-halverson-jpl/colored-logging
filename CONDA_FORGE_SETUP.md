@@ -2,7 +2,39 @@
 
 This guide explains how to make `colored-logging` available on conda-forge with fully automated releases.
 
-## One-Time Setup
+## Quick Start (Automated)
+
+The easiest way to submit to conda-forge is using the automated script:
+
+```bash
+# Submit the current version from pyproject.toml
+make conda-forge-submit
+
+# Or specify a version explicitly
+make conda-forge-submit-version VERSION=1.0.2
+```
+
+The script will:
+- Fork staged-recipes (if needed)
+- Download the package from PyPI
+- Calculate SHA256 hash automatically
+- Update meta.yaml with correct version and hash
+- Create a branch and commit
+- Push to your fork
+- Create a Pull Request (if GitHub CLI is installed)
+
+### Prerequisites
+
+1. **One-time**: Fork [conda-forge/staged-recipes](https://github.com/conda-forge/staged-recipes) or let the script do it
+2. **Optional**: Install GitHub CLI for automatic PR creation:
+   ```bash
+   brew install gh
+   gh auth login
+   ```
+
+## Manual Setup (Alternative)
+
+If you prefer to submit manually or need more control:
 
 ### Step 1: Initial Submission to conda-forge
 
