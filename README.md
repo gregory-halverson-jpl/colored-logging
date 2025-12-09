@@ -10,8 +10,18 @@ NASA Jet Propulsion Laboratory 329G
 
 This package is available as a [pip package](https://pypi.org/project/colored-logging/) called `colored-logging` with a dash.
 
+### Using pip
+
 ```bash
 pip install colored-logging
+```
+
+### Using conda
+
+Once published to conda-forge, you can install via:
+
+```bash
+conda install -c conda-forge colored-logging
 ```
 
 ## Usage
